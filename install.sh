@@ -1,10 +1,10 @@
 sudo apt update -y && sudo apt upgrade -y
 
 # exiftool
-sudo apt install exiftool fd
+sudo apt install exiftool
 
 # mozjpeg
-sudo apt install cmake autoconf automake libtool nasm make pkg-config
+sudo apt install cmake autoconf automake libtool nasm make pkg-config libpng-dev
 wget https://github.com/mozilla/mozjpeg/archive/refs/tags/v4.1.1.tar.gz &&
 	tar xvzf ./v4.1.1.tar.gz &&
 	rm -f v4.1.1.tar.gz &&
@@ -19,7 +19,7 @@ wget https://github.com/mozilla/mozjpeg/archive/refs/tags/v4.1.1.tar.gz &&
 
 
 # shashin-bu
-sudo mkdir -p /opt/shashin-bu && 
-  sudo rm -f /opt/shashin-bu/compress.sh $HOME/.local/bin/compress.sh && 
-  sudo cp compress.sh /opt/shashin-bu/compress.sh &&
-  sudo ln -s /opt/shashin-bu/compress.sh $HOME/.local/bin
+sudo mkdir -p /opt/shashin-bu
+sudo rm -f /opt/shashin-bu/compress.sh $HOME/.local/bin/compress.sh
+sudo cp compress.sh /opt/shashin-bu/compress.sh
+sudo ln -s /opt/shashin-bu/compress.sh $HOME/.local/bin
